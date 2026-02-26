@@ -11,5 +11,29 @@ namespace task2
         {
 
         }
+
+        public class Logic
+        {
+            public static int CompareDigit(int threeDigitNumber)
+            {
+                int firstDigit = threeDigitNumber / 100;
+                int secondDigit = (threeDigitNumber - firstDigit * 100) / 10;
+                int thirdDigit = (threeDigitNumber - firstDigit * 100 - secondDigit * 10);
+
+                if (firstDigit > secondDigit && firstDigit > thirdDigit)
+                {
+                    return firstDigit;
+                }
+                else if (secondDigit > thirdDigit && secondDigit > firstDigit)
+                {
+                    return secondDigit;
+                }
+                else
+                {
+                    return thirdDigit;
+                }
+
+            }
+        }
     }
 }
