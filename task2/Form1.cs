@@ -5,22 +5,24 @@ namespace task2
         public Form1()
         {
             InitializeComponent();
+            textThreeDigitNumber.Text = Properties.Settings.Default.textThreeDigitNumber.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int threeDigitNumber;
-            try // оборачиваем кусок кода склонный к падению
+            try 
             {
                 threeDigitNumber = int.Parse(this.textThreeDigitNumber.Text);
 
             }
-            catch (FormatException) // тип ошибки, которую перехватываем
+            catch (FormatException) 
             {
-                return; // прерываем обработчик клика, если ввели какую-то ерунду
+                return;
             }
+            Properties.Settings.Default.textThreeDigitNumber = threeDigitNumber;
+            Properties.Settings.Default.Save();
 
-            // выведем сообщение о сравнимости заработка
             MessageBox.Show(Logic.CompareDigit(threeDigitNumber));
         }
     }
