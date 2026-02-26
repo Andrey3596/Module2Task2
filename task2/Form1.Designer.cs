@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
+            textThreeDigitNumber = new TextBox();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -37,34 +37,35 @@
             // 
             button1.Location = new Point(12, 41);
             button1.Name = "button1";
-            button1.Size = new Size(144, 23);
+            button1.Size = new Size(265, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Click";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox1
+            // textThreeDigitNumber
             // 
-            textBox1.Location = new Point(12, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            textThreeDigitNumber.Location = new Point(12, 12);
+            textThreeDigitNumber.Name = "textThreeDigitNumber";
+            textThreeDigitNumber.Size = new Size(100, 23);
+            textThreeDigitNumber.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(118, 15);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(159, 15);
             label1.TabIndex = 2;
-            label1.Text = "label1";
+            label1.Text = "Введите трехзначное число";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(214, 87);
+            ClientSize = new Size(301, 93);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(textThreeDigitNumber);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
@@ -75,7 +76,7 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
+        private TextBox textThreeDigitNumber;
         private Label label1;
     }
 }
