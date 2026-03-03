@@ -22,8 +22,8 @@ namespace task2
             }
             Properties.Settings.Default.textThreeDigitNumber = threeDigitNumber;
             Properties.Settings.Default.Save();
-
-            MessageBox.Show(Logic.CompareDigit(threeDigitNumber));
+            string answer = Logic.CompareDigit(threeDigitNumber);
+            MessageBox.Show(answer);
         }
     }
     public class Logic

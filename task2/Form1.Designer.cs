@@ -31,21 +31,22 @@
             button1 = new Button();
             textThreeDigitNumber = new TextBox();
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 41);
+            button1.Location = new Point(12, 108);
             button1.Name = "button1";
             button1.Size = new Size(265, 23);
             button1.TabIndex = 0;
-            button1.Text = "Click";
+            button1.Text = "Вывести наибольшее";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // textThreeDigitNumber
             // 
-            textThreeDigitNumber.Location = new Point(12, 12);
+            textThreeDigitNumber.Location = new Point(12, 79);
             textThreeDigitNumber.Name = "textThreeDigitNumber";
             textThreeDigitNumber.Size = new Size(100, 23);
             textThreeDigitNumber.TabIndex = 1;
@@ -53,17 +54,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(118, 15);
+            label1.Location = new Point(118, 82);
             label1.Name = "label1";
             label1.Size = new Size(159, 15);
             label1.TabIndex = 2;
             label1.Text = "Введите трехзначное число";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(258, 45);
+            label2.TabIndex = 3;
+            label2.Text = "Дано трехзначное число.\r\nНе прибегая к использованию строк вывести\r\nнаибольшую из его цифр";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(301, 93);
+            ClientSize = new Size(297, 147);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textThreeDigitNumber);
             Controls.Add(button1);
@@ -78,5 +89,6 @@
         private Button button1;
         private TextBox textThreeDigitNumber;
         private Label label1;
+        private Label label2;
     }
 }
