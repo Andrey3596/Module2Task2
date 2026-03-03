@@ -14,7 +14,6 @@ namespace task2
             try 
             {
                 threeDigitNumber = int.Parse(this.textThreeDigitNumber.Text);
-
             }
             catch (FormatException) 
             {
